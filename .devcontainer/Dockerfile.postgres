@@ -1,0 +1,12 @@
+# Use the official PostgreSQL image as the base
+FROM postgres:latest
+
+# Install pgvector extension
+RUN apt-get update && apt-get install -y \
+    postgresql-server-dev-all \
+    && git clone https://github.com/pgvector/pgvector.git \
+    && cd pgvector && make && make install \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set the default command to run PostgreSQL
+CMD ["postgres"]
