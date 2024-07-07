@@ -25,6 +25,46 @@ To get started with this template, follow the steps below:
 
 3. When prompted, open the repository in a devcontainer.
 
+### Setting up the Wagtail Project
+
+1. Create a new Wagtail project:
+   ```sh
+   wagtail start myproject
+   cd myproject
+   ```
+
+2. Configure the project settings to use PostgreSQL:
+   ```python
+   # myproject/settings/base.py
+   DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.postgresql',
+           'NAME': 'postgres',
+           'USER': 'postgres',
+           'PASSWORD': 'postgres',
+           'HOST': 'db',
+           'PORT': 5432,
+       }
+   }
+   ```
+
+3. Apply the migrations:
+   ```sh
+   python manage.py migrate
+   ```
+
+4. Create a superuser:
+   ```sh
+   python manage.py createsuperuser
+   ```
+
+5. Run the development server:
+   ```sh
+   python manage.py runserver
+   ```
+
+6. Open a web browser and navigate to `http://localhost:8000/admin` to access the Wagtail admin interface.  Log in with the superuser credentials created in step 4.
+
 ## Configuration
 The devcontainer is configured to use the `pgvector/pgvector` image for the PostgreSQL service. This ensures that the pgvector extension is available for vector operations.
 
