@@ -31,5 +31,18 @@ The devcontainer is configured to use the `pgvector/pgvector` image for the Post
 ### Docker Compose Configuration
 The `docker-compose.yml` file in the `.devcontainer` directory specifies the services and their configurations.
 
+### pgAdmin4 Integration
+The devcontainer now includes a service definition for `pgAdmin4` to facilitate easier management and interaction with the PostgreSQL database instance. The `pgAdmin4` service is configured in the `docker-compose.yml` file and can be accessed via a web interface.
+
+## Accessing pgAdmin4
+To access pgAdmin4 in the DevContainer environment, follow these steps:
+
+1. Ensure the DevContainer is running.
+2. Open a web browser and navigate to `http://localhost:5050`.
+3. Log in with the default credentials:
+   - **Email**: `admin@admin.com`
+   - **Password**: `admin`
+4. Once logged in, you can manage and interact with the PostgreSQL database instance.
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
