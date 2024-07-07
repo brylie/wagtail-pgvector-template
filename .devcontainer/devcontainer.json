@@ -8,5 +8,6 @@
 		"ghcr.io/hspaans/devcontainer-features/django-upgrade:1": {},
 		"pgAdmin4": {}
 	},
-	"forwardPorts": [5000, 5432, 5050]
+	"forwardPorts": [5000, 5432, 5050],
+	"postCreateCommand": "pip install -r /workspaces/${localWorkspaceFolderBasename}/requirements.txt"
 }
