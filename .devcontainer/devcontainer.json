@@ -5,9 +5,12 @@
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/ruff:1": {},
-		"ghcr.io/hspaans/devcontainer-features/django-upgrade:1": {},
-		"pgAdmin4": {}
+		"ghcr.io/hspaans/devcontainer-features/django-upgrade:1": {}
 	},
-	"forwardPorts": [5000, 5432, 5050],
+	"forwardPorts": [
+		5432,
+		8000,
+		8080
+	],
 	"postCreateCommand": "pip install -r /workspaces/${localWorkspaceFolderBasename}/requirements.txt"
 }
