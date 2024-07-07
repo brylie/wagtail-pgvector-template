@@ -1,4 +1,4 @@
-# wagtail-pgvector-template
+# Wagtail PGVector Template
 Template repository with Wagtail CMS and Postgres and pg_vector extension devcontainer configuration
 
 ## Description
