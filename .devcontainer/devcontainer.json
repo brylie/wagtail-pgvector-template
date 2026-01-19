@@ -4,7 +4,7 @@
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
-		"ghcr.io/devcontainers-contrib/features/ruff:1": {},
+		"ghcr.io/devcontainers-contrib/features/ruff:2": {},
 		"ghcr.io/hspaans/devcontainer-features/django-upgrade:1": {}
 	},
 	"forwardPorts": [
